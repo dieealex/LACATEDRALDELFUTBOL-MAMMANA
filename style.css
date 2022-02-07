@@ -85,7 +85,7 @@ li:hover {
         "footer"
     ;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
@@ -459,7 +459,7 @@ footer {
         "footer "
     ;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
@@ -581,6 +581,8 @@ footer {
 
 }
 
+/* TABLET */
+
 @media (min-width: 481px) and (max-width: 1023px) {
     .headerH2 {
         font-size: 60px;
@@ -662,6 +664,8 @@ footer {
     }
 
 }
+
+/* DESKTOP */
 
 @media (min-width: 1024px) {
     .headerH2 {
@@ -781,7 +785,7 @@ footer {
         "footer "
     ;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
@@ -1011,7 +1015,7 @@ footer {
         "footer "
     ;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
@@ -1244,7 +1248,7 @@ footer {
         "footer "
     ;
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
@@ -1318,7 +1322,7 @@ footer {
             "footer "
         ;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
     }
@@ -1368,7 +1372,7 @@ footer {
             "footer "
         ;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
     }
@@ -1398,8 +1402,8 @@ footer {
 
     .iframe3 {
         position: relative;
-        width: 70vh;
-        height: 50vh;
+        width: 50%;
+        height: 100%;
         margin-bottom: 5vh;
     }
 
@@ -1418,7 +1422,7 @@ footer {
             "footer "
         ;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
     }
