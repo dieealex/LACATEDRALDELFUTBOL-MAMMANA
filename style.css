@@ -9,7 +9,7 @@ body {
     font-family: 'Bebas Neue', cursive;
     height: 100%;
     color: white;
-    background-image: linear-gradient(315deg, #075e00 0%, #119e1c 74%);
+    background-image: linear-gradient(315deg, #075e00 0%, #85e48c 55%, #119e1c 74%);
 }
 
 .headerH1 {
@@ -20,15 +20,6 @@ body {
     padding: 40px 0px 40px 0px;
 }
 
-ul {
-    margin-bottom: 5px;
-    margin-left: 5px;
-    width: 100%;
-    height: 30px;
-    padding: 2px;
-    position: fixed;
-}
-
 li {
     background-color: rgb(0, 168, 0);
     list-style-type: none;
@@ -37,31 +28,11 @@ li {
     border: white solid 2px;
 }
 
-li:hover {
-    background-color: white;
-}
-
 .posicion {
     position: absolute;
     width: 200px;
     height: 200px;
     text-align: start;
-}
-
-.transicion {
-    transition: all 2s;
-}
-
-.transicion:hover {
-    width: 25%;
-    height: 100%;
-    border: inherit;
-    background-repeat: no-repeat;
-}
-
-.imagenPrincipal {
-    order: -1;
-    width: 100%;
 }
 
 .imagenesSecu {
@@ -92,9 +63,7 @@ li:hover {
     display: grid;
     grid-template-areas:
         "cabeza"
-        "menu"
         "inicio"
-        "footer"
     ;
     grid-template-columns: 100%;
     grid-template-rows: auto;
@@ -104,11 +73,6 @@ li:hover {
 
 header {
     grid-area: cabeza;
-    padding: 5px;
-}
-
-nav {
-    grid-area: menu;
     padding: 5px;
 }
 
@@ -118,11 +82,6 @@ nav {
     padding: 5px;
 }
 
-footer {
-    grid-area: footer;
-    padding: 5px;
-}
-
 /* FLEX */
 
 .menuFlex {
@@ -131,35 +90,22 @@ footer {
     justify-content: center;
 }
 
-.footerFlex {
-    display: flex;
-    justify-content: center;
-}
-
 /* MOBILE FIRST */
 /* SMARTPHONE */
 @media (max-width: 480px) {
     body {
         font-family: 'Bebas Neue', cursive;
+        height: 100%;
         color: white;
-        background-color: black;
-        height: 100vh;
+        background-image: linear-gradient(315deg, #075e00 0%, #85e48c 55%, #119e1c 74%);
     }
 
     .headerH1 {
         font-size: 80px;
         text-align: center;
-        background-color: rgb(0, 80, 0);
+        background-color: #d5dfd7;
+        background-image: radial-gradient(circle at 50%, #279634 0%, #068d16 80%, #086804 94%);
         padding: 40px 0px 40px 0px;
-    }
-
-    ul {
-        margin-bottom: 5px;
-        margin-left: 5px;
-        width: 100%;
-        height: 30px;
-        padding: 2px;
-        position: fixed;
     }
 
     li {
@@ -170,10 +116,6 @@ footer {
         border: white solid 2px;
     }
 
-    li:hover {
-        background-color: white;
-    }
-
     .posicion {
         position: absolute;
         width: 200px;
@@ -181,14 +123,16 @@ footer {
         text-align: start;
     }
 
-    .imagenPrincipal {
-        order: -1;
-        width: 100%;
-    }
-
     .imagenesSecu {
         width: 24%;
         height: 53vh;
+    }
+
+    .colorVerdeSeccion {
+        font-size: 30px;
+        color: rgb(220, 255, 220);
+        font-style: italic;
+        padding: 20px;
     }
 
     .iframe {
@@ -197,1083 +141,36 @@ footer {
         margin-left: 0;
     }
 
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "inicio"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/* TABLET */
-@media (max-width: 481px) and (max-width: 1023px) {
-    body {
-        font-family: 'Bebas Neue', cursive;
-        color: white;
-        background-color: black;
-        height: 100vh;
-    }
-
-    .headerH1 {
-        font-size: 80px;
-        text-align: center;
-        background-color: rgb(0, 80, 0);
-        padding: 40px 0px 40px 0px;
-    }
-
-    ul {
-        margin-bottom: 5px;
-        margin-left: 5px;
-        width: 100%;
-        height: 30px;
-        padding: 2px;
-        position: fixed;
-    }
-
-    li {
-        background-color: rgb(0, 168, 0);
-        list-style-type: none;
-        padding: 0px 20px 0px 20px;
-        margin: 1px;
-        border: white solid 2px;
-    }
-
-    li:hover {
-        background-color: white;
-    }
-
-    .posicion {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        text-align: start;
-    }
-
-    .imagenPrincipal {
-        order: -1;
-        width: 100%;
-    }
-
-    .imagenesSecu {
-        width: 24%;
-        height: 53vh;
-    }
-
-    .iframe {
-        width: 99%;
-        height: 70vh;
-        margin-left: 0;
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "inicio"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/* DESKTOP */
-@media (max-width: 1024px) {
-    body {
-        font-family: 'Bebas Neue', cursive;
-        color: white;
-        background-color: black;
-        height: 100vh;
-    }
-
-    .headerH1 {
-        font-size: 80px;
-        text-align: center;
-        background-color: rgb(0, 80, 0);
-        padding: 40px 0px 40px 0px;
-    }
-
-    ul {
-        margin-bottom: 5px;
-        margin-left: 5px;
-        width: 100%;
-        height: 30px;
-        padding: 2px;
-        position: fixed;
-    }
-
-    li {
-        background-color: rgb(0, 168, 0);
-        list-style-type: none;
-        padding: 0px 20px 0px 20px;
-        margin: 1px;
-        border: white solid 2px;
-    }
-
-    li:hover {
-        background-color: white;
-    }
-
-    .posicion {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        text-align: start;
-    }
-
-    .imagenPrincipal {
-        order: -1;
-        width: 100%;
-    }
-
-    .imagenesSecu {
-        width: 24%;
-        height: 53vh;
-    }
-
-    .iframe {
-        width: 99%;
-        height: 70vh;
-        margin-left: 0;
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "inicio"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/* NOVEDADES */
-
-* {
-    margin: 0;
-}
-
-.headerH2 {
-    font-size: 60px;
-    text-align: center;
-    background-image: radial-gradient(circle at 50%, #63d471 0%, #068d16 80%, #086804 94%);
-    padding: 50px 0px 55px 0px;
-}
-
-.posicion {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    text-align: start;
-}
-
-.imagen {
-    background-image: url("img/novedades/arg.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover cover;
-    max-width: auto;
-    height: 50vmax;
-}
-
-.transicion {
-    transition: all 2s;
-}
-
-.transicion:hover {
-    width: 35%;
-    height: 100%;
-    border: inherit;
-    background-repeat: no-repeat;
-}
-
-/* GRID */
-
-#gridAreas2 {
-    display: grid;
-    grid-template-areas:
-        "cabeza"
-        "menu"
-        "novedades"
-        "footer "
-    ;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    height: 100%;
-}
-
-header {
-    grid-area: cabeza;
-    padding: 5px;
-}
-
-nav {
-    grid-area: menu;
-    padding: 5px;
-}
-
-.main2 {
-    grid-area: novedades;
-    padding: 5px;
-}
-
-footer {
-    grid-area: footer;
-    padding: 5px;
-}
-
-/* FLEX */
-
-.menuFlex {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
-
-.mainFlex {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    justify-self: stretch;
-}
-
-.footerFlex {
-    display: flex;
-    justify-content: center;
-}
-
-/* MOBILE FIRST */
-/* SMARTPHONE */
-@media (max-width: 480px) {
-    .headerH2 {
-        font-size: 60px;
-        text-align: center;
-        background-color: rgb(0, 80, 0);
-        padding: 50px 0px 55px 0px;
-    }
-
-    .posicion {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        text-align: start;
-    }
-
-    .imagen {
-        background-image: url("img/novedades/arg.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover cover;
-        max-width: auto;
-        height: 50vmax;
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "novedades"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-
-}
-
-/* TABLET */
-
-@media (min-width: 481px) and (max-width: 1023px) {
-    .headerH2 {
-        font-size: 60px;
-        text-align: center;
-        background-color: rgb(0, 80, 0);
-        padding: 50px 0px 55px 0px;
-    }
-
-    .posicion {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        text-align: start;
-    }
-
-    .imagen {
-        background-image: url("img/novedades/arg.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover cover;
-        max-width: auto;
-        height: 50vmax;
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "novedades"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-
-}
-
-/* DESKTOP */
-
-@media (min-width: 1024px) {
-    .headerH2 {
-        font-size: 60px;
-        text-align: center;
-        background-color: rgb(0, 80, 0);
-        padding: 50px 0px 55px 0px;
-    }
-
-    .posicion {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        text-align: start;
-    }
-
-    .imagen {
-        background-image: url("img/novedades/arg.png");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover cover;
-        max-width: auto;
-        height: 50vmax;
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "novedades"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-
-}
-
-/* PRODUCTOS */
-
-/* ESTILOS GENERALES */
-
-* {
-    margin: 0px;
-}
-
-.headerH2 {
-    font-size: 60px;
-    text-align: center;
-    background-image: radial-gradient(circle at 50%, #63d471 0%, #068d16 80%, #086804 94%);
-    padding: 50px 0px 55px 0px;
-}
-
-#TITULO {
-    font-size: 30px;
-    color: rgb(232, 255, 232);
-    font-style: italic;
-}
-
-.precios {
-    color: rgb(231, 255, 228);
-}
-
-/* GRID */
-
-#gridAreas3 {
-    display: grid;
-    grid-template-areas:
-        "cabeza"
-        "menu"
-        "productos"
-        "footer "
-    ;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    height: 100%;
-}
-
-header {
-    grid-area: cabeza;
-    padding: 5px;
-}
-
-nav {
-    grid-area: menu;
-    padding: 5px;
-}
-
-.main3 {
-    grid-area: productos;
-    padding: 5px;
-}
-
-footer {
-    grid-area: footer;
-    padding: 5px;
-}
-
-.galeriaFlex {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 5;
-}
-
-/* MOBILE FIRST */
-/* SMARTPHONE */
-@media (max-width: 480px) {
-    body {
-        font-family: 'Bebas Neue', cursive;
-        color: white;
-        background-color: black;
-        height: 100vh;
-        width: auto;
-    }
-
-    .headerH2 {
-        font-size: 60px;
-        text-align: center;
-        background-color: rgb(0, 80, 0);
-        padding: 50px 0px 55px 0px;
-    }
-
-    #TITULO {
-        font-size: 30px;
-        color: rgb(232, 255, 232);
-        font-style: italic;
-    }
-
-    .precios {
-        color: rgb(232, 255, 232);
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "productos"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .galeriaFlex {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        padding: 5;
-    }
-}
-
-/* TABLET */
-@media (max-width: 481px) AND (max-width: 1023px) {
-    body {
-        font-family: 'Bebas Neue', cursive;
-        color: white;
-        background-color: black;
-        height: 100vh;
-        width: auto;
-    }
-
-    .headerH2 {
-        font-size: 60px;
-        text-align: center;
-        background-color: rgb(0, 80, 0);
-        padding: 50px 0px 55px 0px;
-    }
-
-    #TITULO {
-        font-size: 30px;
-        color: rgb(232, 255, 232);
-        font-style: italic;
-    }
-
-    .precios {
-        color: rgb(232, 255, 232);
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "productos"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .galeriaFlex {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        padding: 5;
-    }
-}
-
-/* DESKTOP */
-@media (min-width: 1024px) {
-    body {
-        font-family: 'Bebas Neue', cursive;
-        color: white;
-        background-color: black;
-        height: 100vh;
-        width: auto;
-    }
-
-    .headerH2 {
-        font-size: 60px;
-        text-align: center;
-        background-color: rgb(0, 80, 0);
-        padding: 50px 0px 55px 0px;
-    }
-
-    #TITULO {
-        font-size: 30px;
-        color: rgb(232, 255, 232);
-        font-style: italic;
-    }
-
-    .precios {
-        color: rgb(232, 255, 232);
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "productos"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .galeriaFlex {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        padding: 5;
-    }
-}
-
-/* NOSOTROS */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-.p {
-    font-weight: normal;
-    font-style: italic;
-}
-
-.bordeLogo {
-    border: double 4px rgb(0, 233, 0);
-}
-
-.borde2 {
-    border: solid 4px rgb(0, 233, 0);
-    width: 300px;
-    height: 300px;
-}
-
-.iframe2 {
-    width: 60%;
-    height: 400px;
-}
-
-/* GRID */
-
-#gridAreas4 {
-    display: grid;
-    grid-template-areas:
-        "cabeza"
-        "menu"
-        "nosotros"
-        "footer "
-    ;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    height: 100%;
-}
-
-header {
-    grid-area: cabeza;
-    padding: 5px;
-}
-
-nav {
-    grid-area: menu;
-    padding: 5px;
-}
-
-.main4 {
-    grid-area: nosotros;
-    padding: 5px;
-}
-
-footer {
-    grid-area: footer;
-    padding: 5px;
-}
-
-/* FLEX */
-
-.menuFlex {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
-
-.galeriaFlex2 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-}
-
-.footerFlex {
-    display: flex;
-    justify-content: center;
-}
-
-/* MOBILE FIRST */
-/* SMARTPHONE */
-@media (max-width: 480px) {
-    .p {
-        font-weight: normal;
-        font-style: italic;
-    }
-
-    .bordeLogo {
-        border: double 4px rgb(0, 233, 0);
-    }
-
-    .borde2 {
-        border: solid 4px rgb(0, 233, 0);
-        width: 300px;
-        height: 300px;
-    }
-
-    .iframe2 {
-        width: 60%;
-        height: 400px;
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "nosotros"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/* TABLET */
-@media (min-width: 481px) and (max-width: 1023px) {
-    .p {
-        font-weight: normal;
-        font-style: italic;
-    }
-
-    .bordeLogo {
-        border: double 4px rgb(0, 233, 0);
-    }
-
-    .borde2 {
-        border: solid 4px rgb(0, 233, 0);
-        width: 300px;
-        height: 300px;
-    }
-
-    .iframe2 {
-        width: 60%;
-        height: 400px;
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "nosotros"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/* DESKTOP */
-@media (min-width: 1024px) {
-    .p {
-        font-weight: normal;
-        font-style: italic;
-    }
-
-    .bordeLogo {
-        border: double 4px rgb(0, 233, 0);
-    }
-
-    .borde2 {
-        border: solid 4px rgb(0, 233, 0);
-        width: 300px;
-        height: 300px;
-    }
-
-    .iframe2 {
-        width: 60%;
-        height: 400px;
-    }
-
-    /* GRID POR AREAS */
-
-    #gridAreas {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "nosotros"
-            "footer"
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
-
-    /* FLEX */
-
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
-
-/* CONTACTOS */
-
-* {
-    margin: 0;
-}
-
-.imagen2 {
-    background-image: url("img/mapa.png");
-    background-size: cover cover;
-    background-position: center center;
-    width: 400px;
-    height: 400px;
-    background-repeat: no-repeat;
-    padding: 10px;
-}
-
-.iframe3 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-self: stretch center;
-    height: 100%;
-}
-
-.transicion2 {
-    transition: all 2s;
-}
-
-.transicion2:hover {
-    width: 80%;
-    border: inherit;
-    background-repeat: no-repeat;
-}
-
-.footer {
-    padding: 5px 0px 5px 0px;
-}
-
-/* GRID */
-
-#gridAreas5 {
-    display: grid;
-    grid-template-areas:
-        "cabeza"
-        "menu"
-        "contacto"
-        "footer "
-    ;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    height: 100%;
-}
-
-header {
-    grid-area: cabeza;
-    padding: 5px;
-}
-
-nav {
-    grid-area: menu;
-    padding: 5px;
-}
-
-.main5 {
-    grid-area: contacto;
-    padding: 5px;
-    margin-left: 30px;
-
-}
-
-footer {
-    grid-area: footer;
-    padding: 5px;
-}
-
-/* FLEX */
-
-.menuFlex {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
-
-.footerFlex {
-    display: flex;
-    justify-content: center;
-}
-
-/* MOBILE FIRST */
-/* SMARTPHONE */
-@media (max-width: 480px) {
-    .imagen2 {
-        background-image: url("img/mapa.png");
-        background-size: cover cover;
-        background-position: center center;
-        width: 400px;
-        height: 400px;
-        background-repeat: no-repeat;
-    }
-
-    .footer {
-        padding: 5px 0px 5px 0px;
+    .borde {
+        border: inset 5px black;
     }
 
     /* GRID */
 
-    #gridAreas5 {
+    #gridAreas {
         display: grid;
         grid-template-areas:
             "cabeza"
-            "menu"
-            "contacto"
-            "footer "
+            "inicio"
         ;
         grid-template-columns: 100%;
         grid-template-rows: auto;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
-        height: 100%;
     }
+
+    header {
+        grid-area: cabeza;
+        padding: 5px;
+    }
+
+    .main {
+        grid-area: inicio;
+        background-color: rgb(24, 68, 24);
+        padding: 5px;
+    }
+
+    /* FLEX */
 
     .menuFlex {
         display: flex;
@@ -1281,105 +178,386 @@ footer {
         justify-content: center;
     }
 
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
 
-/* TABLET */
-@media (min-width: 481px) and (max-width: 1023px) {
-    .imagen2 {
-        background-image: url("img/mapa.png");
-        background-size: cover cover;
-        background-position: center center;
-        width: 400px;
-        height: 400px;
-        background-repeat: no-repeat;
-    }
+    /* TABLET */
+    @media (max-width: 481px) and (max-width: 1023px) {
+        body {
+            font-family: 'Bebas Neue', cursive;
+            height: 100%;
+            color: white;
+            background-image: linear-gradient(315deg, #075e00 0%, #85e48c 55%, #119e1c 74%);
+        }
 
-    .footer {
-        padding: 5px 0px 5px 0px;
-    }
+        .headerH1 {
+            font-size: 80px;
+            text-align: center;
+            background-color: #d5dfd7;
+            background-image: radial-gradient(circle at 50%, #279634 0%, #068d16 80%, #086804 94%);
+            padding: 40px 0px 40px 0px;
+        }
 
-    /* GRID */
+        li {
+            background-color: rgb(0, 168, 0);
+            list-style-type: none;
+            padding: 0px 20px 0px 20px;
+            margin: 1px;
+            border: white solid 2px;
+        }
 
-    #gridAreas5 {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "contacto"
-            "footer "
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
+        .posicion {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            text-align: start;
+        }
 
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
+        .imagenesSecu {
+            width: 24%;
+            height: 53vh;
+        }
 
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
+        .colorVerdeSeccion {
+            font-size: 30px;
+            color: rgb(220, 255, 220);
+            font-style: italic;
+            padding: 20px;
+        }
 
-/* DESKTOP */
-@media (min-width: 1024px) {
-    .imagen2 {
-        background-image: url("img/mapa.png");
-        background-size: cover cover;
-        background-position: center center;
-        width: 400px;
-        height: 400px;
-        background-repeat: no-repeat;
-    }
+        .iframe {
+            width: 99%;
+            height: 70vh;
+            margin-left: 0;
+        }
 
-    <<<<<<< HEAD .iframe3 {
-        position: relative;
-        width: 50%;
-        height: 100%;
-        margin-bottom: 5vh;
-    }
+        .borde {
+            border: inset 5px black;
+        }
 
-    =======>>>>>>>main+animaciones .footer {
-        padding: 5px 0px 5px 0px;
-    }
+        /* GRID */
 
-    /* GRID */
+        #gridAreas {
+            display: grid;
+            grid-template-areas:
+                "cabeza"
+                "inicio"
+            ;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+        }
 
-    #gridAreas5 {
-        display: grid;
-        grid-template-areas:
-            "cabeza"
-            "menu"
-            "contacto"
-            "footer "
-        ;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        height: 100%;
-    }
+        header {
+            grid-area: cabeza;
+            padding: 5px;
+        }
 
-    .menuFlex {
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
+        .main {
+            grid-area: inicio;
+            background-color: rgb(24, 68, 24);
+            padding: 5px;
+        }
 
-    .footerFlex {
-        display: flex;
-        justify-content: center;
-    }
-}
+        /* FLEX */
 
-/* FIN */
+        .menuFlex {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+        }
+
+
+        /* DESKTOP */
+        @media (max-width: 1024px) {
+            body {
+                font-family: 'Bebas Neue', cursive;
+                height: 100%;
+                color: white;
+                background-image: linear-gradient(315deg, #075e00 0%, #85e48c 55%, #119e1c 74%);
+            }
+
+            .headerH1 {
+                font-size: 80px;
+                text-align: center;
+                background-color: #d5dfd7;
+                background-image: radial-gradient(circle at 50%, #279634 0%, #068d16 80%, #086804 94%);
+                padding: 40px 0px 40px 0px;
+            }
+
+            li {
+                background-color: rgb(0, 168, 0);
+                list-style-type: none;
+                padding: 0px 20px 0px 20px;
+                margin: 1px;
+                border: white solid 2px;
+            }
+
+            .posicion {
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                text-align: start;
+            }
+
+            .imagenesSecu {
+                width: 24%;
+                height: 53vh;
+            }
+
+            .colorVerdeSeccion {
+                font-size: 30px;
+                color: rgb(220, 255, 220);
+                font-style: italic;
+                padding: 20px;
+            }
+
+            .iframe {
+                width: 99%;
+                height: 70vh;
+                margin-left: 0;
+            }
+
+            .borde {
+                border: inset 5px black;
+            }
+
+            /* GRID */
+
+            #gridAreas {
+                display: grid;
+                grid-template-areas:
+                    "cabeza"
+                    "inicio"
+                ;
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+                grid-column-gap: 5px;
+                grid-row-gap: 5px;
+            }
+
+            header {
+                grid-area: cabeza;
+                padding: 5px;
+            }
+
+            .main {
+                grid-area: inicio;
+                background-color: rgb(24, 68, 24);
+                padding: 5px;
+            }
+
+            /* FLEX */
+
+            .menuFlex {
+                display: flex;
+                flex-flow: row;
+                justify-content: center;
+            }
+
+            /* PRODUCTOS */
+
+            /* ESTILOS GENERALES */
+
+            * {
+                margin: 0px;
+            }
+
+            #TITULO {
+                font-size: 30px;
+                color: rgb(232, 255, 232);
+                font-style: italic;
+            }
+
+            .precios {
+                color: rgb(231, 255, 228);
+            }
+
+            /* GRID */
+
+            #gridAreas2 {
+                display: grid;
+                grid-template-areas:
+                    "cabeza"
+                    "productos"
+                ;
+                grid-template-columns: 100%;
+                grid-template-rows: auto;
+                grid-column-gap: 5px;
+                grid-row-gap: 5px;
+            }
+
+            header {
+                grid-area: cabeza;
+                padding: 5px;
+            }
+
+            .main2 {
+                grid-area: productos;
+                padding: 5px;
+            }
+
+            .galeriaFlex {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                padding: 5;
+            }
+
+            /* MOBILE FIRST */
+            /* SMARTPHONE */
+            @media (max-width: 480px) {
+                body {
+                    font-family: 'Bebas Neue', cursive;
+                    color: white;
+                    background-color: black;
+                    height: 100vh;
+                    width: auto;
+                }
+
+                #TITULO {
+                    font-size: 30px;
+                    color: rgb(232, 255, 232);
+                    font-style: italic;
+                }
+
+                .precios {
+                    color: rgb(231, 255, 228);
+                }
+
+                /* GRID */
+
+                #gridAreas2 {
+                    display: grid;
+                    grid-template-areas:
+                        "cabeza"
+                        "productos"
+                    ;
+                    grid-template-columns: 100%;
+                    grid-template-rows: auto;
+                    grid-column-gap: 5px;
+                    grid-row-gap: 5px;
+                }
+
+                header {
+                    grid-area: cabeza;
+                    padding: 5px;
+                }
+
+                .main2 {
+                    grid-area: productos;
+                    padding: 5px;
+                }
+
+                .galeriaFlex {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    padding: 5;
+                }
+
+
+                /* TABLET */
+                @media (max-width: 481px) AND (max-width: 1023px) {
+                    body {
+                        font-family: 'Bebas Neue', cursive;
+                        color: white;
+                        background-color: black;
+                        height: 100vh;
+                        width: auto;
+                    }
+
+                    #TITULO {
+                        font-size: 30px;
+                        color: rgb(232, 255, 232);
+                        font-style: italic;
+                    }
+
+                    .precios {
+                        color: rgb(231, 255, 228);
+                    }
+
+                    /* GRID */
+
+                    #gridAreas2 {
+                        display: grid;
+                        grid-template-areas:
+                            "cabeza"
+                            "productos"
+                        ;
+                        grid-template-columns: 100%;
+                        grid-template-rows: auto;
+                        grid-column-gap: 5px;
+                        grid-row-gap: 5px;
+                    }
+
+                    header {
+                        grid-area: cabeza;
+                        padding: 5px;
+                    }
+
+                    .main2 {
+                        grid-area: productos;
+                        padding: 5px;
+                    }
+
+                    .galeriaFlex {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        padding: 5;
+                    }
+
+
+                    /* DESKTOP */
+                    @media (min-width: 1024px) {
+                        body {
+                            font-family: 'Bebas Neue', cursive;
+                            color: white;
+                            background-color: black;
+                            height: 100vh;
+                            width: auto;
+                        }
+
+                        #TITULO {
+                            font-size: 30px;
+                            color: rgb(232, 255, 232);
+                            font-style: italic;
+                        }
+
+                        .precios {
+                            color: rgb(231, 255, 228);
+                        }
+
+                        /* GRID */
+
+                        #gridAreas2 {
+                            display: grid;
+                            grid-template-areas:
+                                "cabeza"
+                                "productos"
+                            ;
+                            grid-template-columns: 100%;
+                            grid-template-rows: auto;
+                            grid-column-gap: 5px;
+                            grid-row-gap: 5px;
+                        }
+
+                        header {
+                            grid-area: cabeza;
+                            padding: 5px;
+                        }
+
+                        .main2 {
+                            grid-area: productos;
+                            padding: 5px;
+                        }
+
+                        .galeriaFlex {
+                            display: flex;
+                            flex-flow: row wrap;
+                            justify-content: center;
+                            padding: 5;
+                        }
+
+
+                        /* FIN */
