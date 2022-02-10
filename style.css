@@ -177,7 +177,7 @@ header {
         flex-flow: row;
         justify-content: center;
     }
-
+}
 
     /* TABLET */
     @media (max-width: 481px) and (max-width: 1023px) {
@@ -265,7 +265,7 @@ header {
             flex-flow: row;
             justify-content: center;
         }
-
+    }
 
         /* DESKTOP */
         @media (max-width: 1024px) {
@@ -353,6 +353,7 @@ header {
                 flex-flow: row;
                 justify-content: center;
             }
+        }
 
             /* PRODUCTOS */
 
@@ -454,6 +455,7 @@ header {
                     justify-content: center;
                     padding: 5;
                 }
+            }
 
 
                 /* TABLET */
@@ -506,6 +508,7 @@ header {
                         justify-content: center;
                         padding: 5;
                     }
+                }
 
 
                     /* DESKTOP */
@@ -558,6 +561,4 @@ header {
                             justify-content: center;
                             padding: 5;
                         }
-
-
-                        /* FIN */
+                    }
